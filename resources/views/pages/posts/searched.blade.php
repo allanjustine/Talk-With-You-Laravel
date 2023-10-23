@@ -34,16 +34,16 @@
                 <div class="card col-md-6 col-sm-6 border-0">
                     <div class="body px-2 py-3">
                         <div class="dropdown">
-                            <a class="btn float-right" href="#" id="menu-button" data-toggle="dropdown"
+                            <a class="btn float-right" href="#" id="menu-button" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" style="cursor: pointer;"
-                                data-postid="{{ $post->id }}"><i class="far fa-ellipsis-vertical"></i></a>
+                                data-bs-postid="{{ $post->id }}"><i class="far fa-ellipsis-vertical"></i></a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 @if (auth()->check() && auth()->user()->id == $post->user->id)
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#editPost{{ $post->id }}"><i class="far fa-pen-to-square"></i>
+                                    <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#editPost{{ $post->id }}"><i class="far fa-pen-to-square"></i>
                                         Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i> Delete</a>
+                                    <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i> Delete</a>
                                 @else
                                     <a class="dropdown-item" href="#"><i class="far fa-bookmark"></i> Save</a>
                                     <a class="dropdown-item" href="#"><i class="far fa-flag"></i> Report</a>
@@ -135,7 +135,7 @@
                                 </form>
                             @endif
                             <div>
-                                <button class="btn" data-toggle="modal" data-target="#commentPost{{ $post->id }}"><i
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#commentPost{{ $post->id }}"><i
                                         class="far fa-comment"></i>
                                     Comment</button>
                             </div>
