@@ -37,7 +37,8 @@
                             </div>
                             <!-- text -->
                             <div>
-                                <textarea name="content" id="text-area" cols="30" rows="5" class="form-control mb-3 mt-2 @error('content') is-invalid @enderror"
+                                <textarea name="content" id="text-area" cols="30" rows="5"
+                                    class="form-control mb-3 mt-2 @error('content') is-invalid @enderror"
                                     placeholder="What's on your mind, {{ auth()->user()->name }}?" autocomplete="content" autofocus required></textarea>
                             </div>
                             @error('content')
@@ -58,22 +59,24 @@
                             </div>
 
                             <!-- options -->
-                            <input id="post_image" type="file"
-                                class="form-control mt-2 pr-4 mb-1 @error('post_image') is-invalid @enderror"
-                                name="post_image[]" value="{{ old('post_image') }}" accept="image/*"
-                                autocomplete="post_image" multiple>
-                            <span class="float-right disabled"
-                                @error('profile_image')
-                            hidden
-                        @enderror
-                                style="margin-top: -30px; margin-right: 10px; color: gray;"><i
-                                    class="far fa-image"></i></span>
-                            @error('post_image')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            <select name="category_id" id="category_id" class="form-select mt-3">
+                            <div class="form-group mb-0">
+                                <input id="post_image" type="file"
+                                    class="form-control mt-2 pr-4 @error('post_image') is-invalid @enderror"
+                                    name="post_image[]" value="{{ old('post_image') }}" accept="image/*"
+                                    autocomplete="post_image" multiple>
+                                <span class="float-right disabled"
+                                    @error('post_image')
+                                        hidden
+                                    @enderror
+                                    style="margin-top: -30px; margin-right: 10px; color: gray;"><i
+                                        class="far fa-image"></i></span>
+                                @error('post_image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <select name="category_id" id="category_id" class="form-select mt-1">
                                 <option value="" selected hidden>Feeling/activity</option>
                                 <option disabled>Feeling/activity</option>
                                 @foreach ($categories as $category)
