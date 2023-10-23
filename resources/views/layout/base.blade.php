@@ -34,7 +34,7 @@
     @include('layout.navbar')
 </head>
 
-<body class="bg-gray">
+<body class="bg-gray mb-5">
     @yield('content')
 </body>
 

@@ -42,7 +42,7 @@
         <div class="modal fade" id="newChat" tabindex="-1" aria-labelledby="newChatLabel" aria-hidden="true"
             data-bs-backdrop="false">
             <div class="modal-dialog modal-sm position-absolute bottom-0 end-0 w-75 shadow"
-                style="transform: translateX(-80px)">
+                style="transform: translateX(-50px)">
                 <div class="modal-content border-0">
                     <!-- head -->
                     <div class="modal-header align-items-start">
@@ -803,9 +803,8 @@
                                 <li class="dropdown-item p-1 rounded">
                                     <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
                                         <div class="p-2">
-                                            <img src="https://cdn-icons-png.flaticon.com/512/4951/4951185.png"
-                                                alt="from fb" class="rounded-circle"
-                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <img src="https://cdn-icons-png.flaticon.com/512/4951/4951185.png" alt="from fb"
+                                                class="rounded-circle" style="width: 38px; height: 38px; object-fit: cover" />
                                         </div>
                                         <div>
                                             <p class="m-0">Friends</p>
@@ -816,9 +815,8 @@
                                 <li class="dropdown-item p-1 rounded">
                                     <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
                                         <div class="p-2">
-                                            <img src="https://cdn-icons-png.flaticon.com/512/166/166258.png"
-                                                alt="from fb" class="rounded-circle"
-                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <img src="https://cdn-icons-png.flaticon.com/512/166/166258.png" alt="from fb"
+                                                class="rounded-circle" style="width: 38px; height: 38px; object-fit: cover" />
                                         </div>
                                         <div>
                                             <p class="m-0">Groups</p>
@@ -1325,42 +1323,42 @@
 
                         <!-- create post -->
                         @auth
-                        <div class="bg-white p-3 mt-3 rounded border shadow">
-                            <!-- avatar -->
-                            <div class="d-flex" type="button">
-                                <div class="p-1">
-                                    <img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="avatar"
-                                        class="rounded-circle me-2"
-                                        style="width: 38px; height: 38px; object-fit: cover" />
+                            <div class="bg-white p-3 mt-3 rounded border shadow">
+                                <!-- avatar -->
+                                <div class="d-flex" type="button">
+                                    <div class="p-1">
+                                        <img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 38px; height: 38px; object-fit: cover" />
+                                    </div>
+                                    <input type="text" class="form-control rounded-pill border-0 bg-gray pointer"
+                                        placeholder="What's on your mind, {{ auth()->user()->name }}?" data-bs-toggle="modal"
+                                        data-bs-target="#addPost" readonly id="input-area" />
                                 </div>
-                                <input type="text" class="form-control rounded-pill border-0 bg-gray pointer"
-                                    placeholder="What's on your mind, {{ auth()->user()->name }}?" data-bs-toggle="modal"
-                                    data-bs-target="#addPost" readonly id="input-area" />
-                            </div>
 
-                            <hr />
-                            <!-- actions -->
-                            <div class="d-flex flex-column flex-lg-row mt-3">
-                                <!-- a 1 -->
-                                <div class="dropdown-item rounded d-flex align-items-center justify-content-center"
-                                    type="button">
-                                    <i class="fas fa-video me-2 text-danger"></i>
-                                    <p class="m-0 text-muted">Live Video</p>
-                                </div>
-                                <!-- a 2 -->
-                                <div class="dropdown-item rounded d-flex align-items-center justify-content-center"
-                                    type="button">
-                                    <i class="fas fa-photo-video me-2 text-success"></i>
-                                    <p class="m-0 text-muted">Photo/Video</p>
-                                </div>
-                                <!-- a 3 -->
-                                <div class="dropdown-item rounded d-flex align-items-center justify-content-center"
-                                    type="button">
-                                    <i class="fas fa-smile me-2 text-warning"></i>
-                                    <p class="m-0 text-muted">Feeling/Activity</p>
+                                <hr />
+                                <!-- actions -->
+                                <div class="d-flex flex-column flex-lg-row mt-3">
+                                    <!-- a 1 -->
+                                    <div class="dropdown-item rounded d-flex align-items-center justify-content-center"
+                                        type="button">
+                                        <i class="fas fa-video me-2 text-danger"></i>
+                                        <p class="m-0 text-muted">Live Video</p>
+                                    </div>
+                                    <!-- a 2 -->
+                                    <div class="dropdown-item rounded d-flex align-items-center justify-content-center"
+                                        type="button">
+                                        <i class="fas fa-photo-video me-2 text-success"></i>
+                                        <p class="m-0 text-muted">Photo/Video</p>
+                                    </div>
+                                    <!-- a 3 -->
+                                    <div class="dropdown-item rounded d-flex align-items-center justify-content-center"
+                                        type="button">
+                                        <i class="fas fa-smile me-2 text-warning"></i>
+                                        <p class="m-0 text-muted">Feeling/Activity</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endauth
                         <!-- create room -->
                         @auth
@@ -1385,8 +1383,8 @@
                                 </div>
                                 <!-- slider desktop -->
                                 <div class="d-none d-lg-block" style="max-width: 450px">
-                                    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                                        data-bs-interval="false">
+                                    <div id="carouselExampleControls" class="carousel slide carousel-fade"
+                                        data-bs-ride="carousel" data-bs-interval="false">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img src="https://source.unsplash.com/random/1" alt="avatar"
@@ -1747,276 +1745,276 @@
                 </div>
                 <!-- ================= Chatbar ================= -->
                 @auth
-                <div class="col-12 col-lg-3">
-                    <div class="d-none d-lg-block h-100 fixed-top end-0 overflow-hidden scrollbar"
-                        style="
+                    <div class="col-12 col-lg-3">
+                        <div class="d-none d-lg-block h-100 fixed-top end-0 overflow-hidden scrollbar"
+                            style="
               max-width: 275px;
               width: 100%;
               z-index: 4;
               padding-top: 56px;
               left: initial !important;
             ">
-                        <div class="p-3 mt-4">
-                            <!-- sponsors -->
-                            <h5 class="text-muted">Sponsored</h5>
-                            <!-- s 1 -->
-                            <li class="dropdown-item my-2 d-flex justify-content-between">
-                                <!-- img -->
-                                <a href="#" class="d-flex align-items-center text-decoration-none link-dark">
-                                    <img src="https://source.unsplash.com/random/1" alt="ads"
-                                        style="width: 100px; height: 100px; object-fit: cover" class="rounded me-3" />
-                                    <div>
-                                        <p class="m-0">Lorem ipsum</p>
-                                        <span class="text-muted fs-7">loremipsum.com</span>
+                            <div class="p-3 mt-4">
+                                <!-- sponsors -->
+                                <h5 class="text-muted">Sponsored</h5>
+                                <!-- s 1 -->
+                                <li class="dropdown-item my-2 d-flex justify-content-between">
+                                    <!-- img -->
+                                    <a href="#" class="d-flex align-items-center text-decoration-none link-dark">
+                                        <img src="https://source.unsplash.com/random/1" alt="ads"
+                                            style="width: 100px; height: 100px; object-fit: cover" class="rounded me-3" />
+                                        <div>
+                                            <p class="m-0">Lorem ipsum</p>
+                                            <span class="text-muted fs-7">loremipsum.com</span>
+                                        </div>
+                                    </a>
+                                    <!-- icon -->
+                                    <div class="rounded-circle p-1 bg-white d-flex align-items-center justify-content-center mx-2 sponsor-icon nav-item"
+                                        type="button" style="width: 38px; height: 38px">
+                                        <i class="fas fa-ellipsis-h text-muted p-2" data-bs-toggle="dropdown"></i>
+                                        <!-- menu -->
+                                        <ul class="dropdown-menu">
+                                            <!-- item 1 -->
+                                            <li class="dropdown-item">
+                                                <a href="#"
+                                                    class="d-flex align-items-center text-decoration-none text-dark">
+                                                    <i class="far fa-window-close"></i>
+                                                    <div class="ms-3">
+                                                        <p class="m-0">Hide Ad</p>
+                                                        <span class="text-muted fs-7">Never see this add again.</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <!-- item 2 -->
+                                            <li class="dropdown-item">
+                                                <a href="#"
+                                                    class="d-flex align-items-center text-decoration-none text-dark">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                    <div class="ms-3">
+                                                        <p class="m-0">Report Ad</p>
+                                                        <span class="text-muted fs-7">Tell us a problem with this add.</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <!-- item 3 -->
+                                            <li class="dropdown-item">
+                                                <a href="#"
+                                                    class="d-flex align-items-center text-decoration-none text-dark">
+                                                    <i class="fas fa-info-circle"></i>
+                                                    <div class="ms-3">
+                                                        <p class="m-0">Why am I seeing this ad?</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </a>
-                                <!-- icon -->
-                                <div class="rounded-circle p-1 bg-white d-flex align-items-center justify-content-center mx-2 sponsor-icon nav-item"
-                                    type="button" style="width: 38px; height: 38px">
-                                    <i class="fas fa-ellipsis-h text-muted p-2" data-bs-toggle="dropdown"></i>
-                                    <!-- menu -->
-                                    <ul class="dropdown-menu">
-                                        <!-- item 1 -->
-                                        <li class="dropdown-item">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-decoration-none text-dark">
-                                                <i class="far fa-window-close"></i>
-                                                <div class="ms-3">
-                                                    <p class="m-0">Hide Ad</p>
-                                                    <span class="text-muted fs-7">Never see this add again.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <!-- item 2 -->
-                                        <li class="dropdown-item">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-decoration-none text-dark">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                                <div class="ms-3">
-                                                    <p class="m-0">Report Ad</p>
-                                                    <span class="text-muted fs-7">Tell us a problem with this add.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <!-- item 3 -->
-                                        <li class="dropdown-item">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-decoration-none text-dark">
-                                                <i class="fas fa-info-circle"></i>
-                                                <div class="ms-3">
-                                                    <p class="m-0">Why am I seeing this ad?</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- s 2 -->
-                            <li class="dropdown-item my-2 d-flex justify-content-between">
-                                <!-- img -->
-                                <a href="#" class="d-flex align-items-center text-decoration-none link-dark">
-                                    <img src="https://source.unsplash.com/random/2" alt="ads"
-                                        style="width: 100px; height: 100px; object-fit: cover" class="rounded me-3" />
-                                    <div>
-                                        <p class="m-0">Lorem ipsum</p>
-                                        <span class="text-muted fs-7">loremipsum.com</span>
+                                </li>
+                                <!-- s 2 -->
+                                <li class="dropdown-item my-2 d-flex justify-content-between">
+                                    <!-- img -->
+                                    <a href="#" class="d-flex align-items-center text-decoration-none link-dark">
+                                        <img src="https://source.unsplash.com/random/2" alt="ads"
+                                            style="width: 100px; height: 100px; object-fit: cover" class="rounded me-3" />
+                                        <div>
+                                            <p class="m-0">Lorem ipsum</p>
+                                            <span class="text-muted fs-7">loremipsum.com</span>
+                                        </div>
+                                    </a>
+                                    <!-- icon -->
+                                    <div class="rounded-circle p-1 bg-white d-flex align-items-center justify-content-center mx-2 sponsor-icon nav-item"
+                                        type="button" style="width: 38px; height: 38px">
+                                        <i class="fas fa-ellipsis-h text-muted p-2" data-bs-toggle="dropdown"></i>
+                                        <!-- menu -->
+                                        <ul class="dropdown-menu">
+                                            <!-- item 1 -->
+                                            <li class="dropdown-item">
+                                                <a href="#"
+                                                    class="d-flex align-items-center text-decoration-none text-dark">
+                                                    <i class="far fa-window-close"></i>
+                                                    <div class="ms-3">
+                                                        <p class="m-0">Hide Ad</p>
+                                                        <span class="text-muted fs-7">Never see this add again.</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <!-- item 2 -->
+                                            <li class="dropdown-item">
+                                                <a href="#"
+                                                    class="d-flex align-items-center text-decoration-none text-dark">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                    <div class="ms-3">
+                                                        <p class="m-0">Report Ad</p>
+                                                        <span class="text-muted fs-7">Tell us a problem with this add.</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <!-- item 3 -->
+                                            <li class="dropdown-item">
+                                                <a href="#"
+                                                    class="d-flex align-items-center text-decoration-none text-dark">
+                                                    <i class="fas fa-info-circle"></i>
+                                                    <div class="ms-3">
+                                                        <p class="m-0">Why am I seeing this ad?</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </a>
-                                <!-- icon -->
-                                <div class="rounded-circle p-1 bg-white d-flex align-items-center justify-content-center mx-2 sponsor-icon nav-item"
-                                    type="button" style="width: 38px; height: 38px">
-                                    <i class="fas fa-ellipsis-h text-muted p-2" data-bs-toggle="dropdown"></i>
-                                    <!-- menu -->
-                                    <ul class="dropdown-menu">
-                                        <!-- item 1 -->
-                                        <li class="dropdown-item">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-decoration-none text-dark">
-                                                <i class="far fa-window-close"></i>
-                                                <div class="ms-3">
-                                                    <p class="m-0">Hide Ad</p>
-                                                    <span class="text-muted fs-7">Never see this add again.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <!-- item 2 -->
-                                        <li class="dropdown-item">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-decoration-none text-dark">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                                <div class="ms-3">
-                                                    <p class="m-0">Report Ad</p>
-                                                    <span class="text-muted fs-7">Tell us a problem with this add.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <!-- item 3 -->
-                                        <li class="dropdown-item">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-decoration-none text-dark">
-                                                <i class="fas fa-info-circle"></i>
-                                                <div class="ms-3">
-                                                    <p class="m-0">Why am I seeing this ad?</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- contacts -->
-                            <hr class="m-0" />
-                            <div class="my-3 d-flex justify-content-between align-items-center">
-                                <p class="text-muted fs-5 m-0">Contacts</p>
-                                <!-- icons -->
-                                <div class="text-muted">
-                                    <!-- video room -->
-                                    <i class="fas fa-video mx-2 pointer" type="button" data-bs-toggle="modal"
-                                        data-bs-target="#videoRoomD"></i>
-                                    <!-- video room modal -->
-                                    <div class="modal fade" id="videoRoomD" tabindex="-1"
-                                        aria-labelledby="videoRoomDLabel" aria-hidden="true" data-bs-backdrop="false">
-                                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                                            <div class="modal-content bg-dark">
-                                                <!-- header -->
-                                                <div class="modal-header border-0">
-                                                    <button type="button" class="btn-close btn-close-white"
-                                                        data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <!-- body -->
-                                                <div class="modal-body d-flex flex-column align-items-center justify-content-center"
-                                                    style="min-height: 400px">
-                                                    <i class="fas fa-video fs-0"></i>
-                                                    <h3 class="text-white">Schedule A Room For Later</h3>
-                                                    <p class="text-white text-center w-50 mx-auto">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing
-                                                        elit. Ut deserunt alias laudantium itaque eius enim
-                                                        natus culpa eligendi consectetur maiores!
-                                                    </p>
-                                                    <button class="btn btn-lg btn-primary rounded-pill">
-                                                        Schedule Room
-                                                    </button>
+                                </li>
+                                <!-- contacts -->
+                                <hr class="m-0" />
+                                <div class="my-3 d-flex justify-content-between align-items-center">
+                                    <p class="text-muted fs-5 m-0">Contacts</p>
+                                    <!-- icons -->
+                                    <div class="text-muted">
+                                        <!-- video room -->
+                                        <i class="fas fa-video mx-2 pointer" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#videoRoomD"></i>
+                                        <!-- video room modal -->
+                                        <div class="modal fade" id="videoRoomD" tabindex="-1"
+                                            aria-labelledby="videoRoomDLabel" aria-hidden="true" data-bs-backdrop="false">
+                                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                <div class="modal-content bg-dark">
+                                                    <!-- header -->
+                                                    <div class="modal-header border-0">
+                                                        <button type="button" class="btn-close btn-close-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <!-- body -->
+                                                    <div class="modal-body d-flex flex-column align-items-center justify-content-center"
+                                                        style="min-height: 400px">
+                                                        <i class="fas fa-video fs-0"></i>
+                                                        <h3 class="text-white">Schedule A Room For Later</h3>
+                                                        <p class="text-white text-center w-50 mx-auto">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                                            elit. Ut deserunt alias laudantium itaque eius enim
+                                                            natus culpa eligendi consectetur maiores!
+                                                        </p>
+                                                        <button class="btn btn-lg btn-primary rounded-pill">
+                                                            Schedule Room
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- new chat -->
+                                        <i class="fas fa-search pointer" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#newChat"></i>
+                                        <!-- chat settings -->
+                                        <i class="fas fa-ellipsis-h pointer text-muted mx-2" type="button"
+                                            data-bs-toggle="dropdown"></i>
+                                        <!-- chat setting dd -->
+                                        <ul class="dropdown-menu shadow" style="width: 18em">
+                                            <!-- title -->
+                                            <div class="p-2">
+                                                <h5>Chat Settings</h5>
+                                                <span class="text-muted fs-7">Customize your Messenger experience.</span>
+                                            </div>
+                                            <hr />
+                                            <!-- incoming sound -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-phone-alt me-3"></i>
+                                                        <p class="m-0">Incoming call sounds</p>
+                                                    </div>
+                                                    <!-- toggle -->
+                                                    <div class="form-check form-switch m-0">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="flexSwitchCheckChecked" checked />
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- message sound -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-volume-off me-4 fs-4"></i>
+                                                        <p class="m-0">Message sounds</p>
+                                                    </div>
+                                                    <!-- toggle -->
+                                                    <div class="form-check form-switch m-0">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="flexSwitchCheckChecked" checked />
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- popup message -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-spinner me-3"></i>
+                                                        <p class="m-0">Pop-up new messages</p>
+                                                    </div>
+                                                    <!-- toggle -->
+                                                    <div class="form-check form-switch m-0">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="flexSwitchCheckChecked" checked />
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked"></label>
+                                                    </div>
+                                                </div>
+                                                <span class="ms-5 text-muted fs-7">Automatically open new messages.</span>
+                                            </li>
+                                            <hr class="m-0" />
+                                            <!-- item 1 -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-toggle-off me-3"></i>
+                                                        <p class="m-0">Turn Off Active Status</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- item 2 -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="far fa-comment-alt me-3"></i>
+                                                        <p class="m-0">Message Request</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- item 3 -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-share-square me-3"></i>
+                                                        <p class="m-0">Message delivery settings</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- item 4 -->
+                                            <li>
+                                                <div class="dropdown-item d-flex align-items-center justify-content-between">
+                                                    <!-- icon -->
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fas fa-shield-alt me-3"></i>
+                                                        <p class="m-0">Block settings</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <!-- new chat -->
-                                    <i class="fas fa-search mx-2 pointer" type="button" data-bs-toggle="modal"
-                                        data-bs-target="#newChat"></i>
-                                    <!-- chat settings -->
-                                    <i class="fas fa-ellipsis-h pointer text-muted mx-2" type="button"
-                                        data-bs-toggle="dropdown"></i>
-                                    <!-- chat setting dd -->
-                                    <ul class="dropdown-menu shadow" style="width: 18em">
-                                        <!-- title -->
-                                        <div class="p-2">
-                                            <h5>Chat Settings</h5>
-                                            <span class="text-muted fs-7">Customize your Messenger experience.</span>
-                                        </div>
-                                        <hr />
-                                        <!-- incoming sound -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-phone-alt me-3"></i>
-                                                    <p class="m-0">Incoming call sounds</p>
-                                                </div>
-                                                <!-- toggle -->
-                                                <div class="form-check form-switch m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="flexSwitchCheckChecked" checked />
-                                                    <label class="form-check-label"
-                                                        for="flexSwitchCheckChecked"></label>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- message sound -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-volume-off me-4 fs-4"></i>
-                                                    <p class="m-0">Message sounds</p>
-                                                </div>
-                                                <!-- toggle -->
-                                                <div class="form-check form-switch m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="flexSwitchCheckChecked" checked />
-                                                    <label class="form-check-label"
-                                                        for="flexSwitchCheckChecked"></label>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- popup message -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-spinner me-3"></i>
-                                                    <p class="m-0">Pop-up new messages</p>
-                                                </div>
-                                                <!-- toggle -->
-                                                <div class="form-check form-switch m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="flexSwitchCheckChecked" checked />
-                                                    <label class="form-check-label"
-                                                        for="flexSwitchCheckChecked"></label>
-                                                </div>
-                                            </div>
-                                            <span class="ms-5 text-muted fs-7">Automatically open new messages.</span>
-                                        </li>
-                                        <hr class="m-0" />
-                                        <!-- item 1 -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-toggle-off me-3"></i>
-                                                    <p class="m-0">Turn Off Active Status</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- item 2 -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="far fa-comment-alt me-3"></i>
-                                                    <p class="m-0">Message Request</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- item 3 -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-share-square me-3"></i>
-                                                    <p class="m-0">Message delivery settings</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- item 4 -->
-                                        <li>
-                                            <div class="dropdown-item d-flex align-items-center justify-content-between">
-                                                <!-- icon -->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fas fa-shield-alt me-3"></i>
-                                                    <p class="m-0">Block settings</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
-                            <!-- friend 1 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat1">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                <!-- friend 1 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat1">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                     <div>
                       <div class="popover-body d-flex p-2">
                         <div>
@@ -2036,28 +2034,28 @@
                       </div>
                     </div>
                   '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/4" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Mike</p>
                                     </div>
-                                    <p class="m-0">Mike</p>
-                                </div>
-                            </li>
-                            <!-- friend 2 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat2">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 2 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat2">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                           <div>
                             <div class="popover-body d-flex p-2">
                               <div>
@@ -2077,28 +2075,28 @@
                             </div>
                           </div>
                         '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/2" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/2" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Tuan</p>
                                     </div>
-                                    <p class="m-0">Tuan</p>
-                                </div>
-                            </li>
-                            <!-- friend 3 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat3">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 3 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat3">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                               <div>
                                 <div class="popover-body d-flex p-2">
                                   <div>
@@ -2118,28 +2116,28 @@
                                 </div>
                               </div>
                             '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/3" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/3" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Jerry</p>
                                     </div>
-                                    <p class="m-0">Jerry</p>
-                                </div>
-                            </li>
-                            <!-- friend 4 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat4">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 4 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat4">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                           <div>
                             <div class="popover-body d-flex p-2">
                               <div>
@@ -2159,28 +2157,28 @@
                             </div>
                           </div>
                         '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/4" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Tony</p>
                                     </div>
-                                    <p class="m-0">Tony</p>
-                                </div>
-                            </li>
-                            <!-- friend 5 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat5">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 5 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat5">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                       <div>
                         <div class="popover-body d-flex p-2">
                           <div>
@@ -2200,28 +2198,28 @@
                         </div>
                       </div>
                     '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/5" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/5" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Phu</p>
                                     </div>
-                                    <p class="m-0">Phu</p>
-                                </div>
-                            </li>
-                            <!-- friend 6 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat1">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 6 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat1">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                                   <div>
                                     <div class="popover-body d-flex p-2">
                                       <div>
@@ -2241,28 +2239,28 @@
                                     </div>
                                   </div>
                                 '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/4" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Mike</p>
                                     </div>
-                                    <p class="m-0">Mike</p>
-                                </div>
-                            </li>
-                            <!-- friend 7 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat2">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 7 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat2">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                                         <div>
                                           <div class="popover-body d-flex p-2">
                                             <div>
@@ -2282,28 +2280,28 @@
                                           </div>
                                         </div>
                                       '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/2" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/2" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Tuan</p>
                                     </div>
-                                    <p class="m-0">Tuan</p>
-                                </div>
-                            </li>
-                            <!-- friend 8 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat3">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 8 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat3">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                                             <div>
                                               <div class="popover-body d-flex p-2">
                                                 <div>
@@ -2323,28 +2321,28 @@
                                               </div>
                                             </div>
                                           '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/3" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/3" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Jerry</p>
                                     </div>
-                                    <p class="m-0">Jerry</p>
-                                </div>
-                            </li>
-                            <!-- friend 9 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat4">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 9 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat4">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                                         <div>
                                           <div class="popover-body d-flex p-2">
                                             <div>
@@ -2364,28 +2362,28 @@
                                           </div>
                                         </div>
                                       '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/4" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Tony</p>
                                     </div>
-                                    <p class="m-0">Tony</p>
-                                </div>
-                            </li>
-                            <!-- friend 10 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat5">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 10 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat5">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                                     <div>
                                       <div class="popover-body d-flex p-2">
                                         <div>
@@ -2405,28 +2403,28 @@
                                       </div>
                                     </div>
                                   '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/5" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/5" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Phu</p>
                                     </div>
-                                    <p class="m-0">Phu</p>
-                                </div>
-                            </li>
-                            <!-- friend 11 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat1">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 11 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat1">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                     <div>
                       <div class="popover-body d-flex p-2">
                         <div>
@@ -2446,28 +2444,28 @@
                       </div>
                     </div>
                   '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/4" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Mike</p>
                                     </div>
-                                    <p class="m-0">Mike</p>
-                                </div>
-                            </li>
-                            <!-- friend 12 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat2">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 12 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat2">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                           <div>
                             <div class="popover-body d-flex p-2">
                               <div>
@@ -2487,28 +2485,28 @@
                             </div>
                           </div>
                         '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/2" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/2" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Tuan</p>
                                     </div>
-                                    <p class="m-0">Tuan</p>
-                                </div>
-                            </li>
-                            <!-- friend 13 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat3">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 13 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat3">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                               <div>
                                 <div class="popover-body d-flex p-2">
                                   <div>
@@ -2528,28 +2526,28 @@
                                 </div>
                               </div>
                             '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/3" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/3" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Jerry</p>
                                     </div>
-                                    <p class="m-0">Jerry</p>
-                                </div>
-                            </li>
-                            <!-- friend 14 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat4">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 14 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat4">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                           <div>
                             <div class="popover-body d-flex p-2">
                               <div>
@@ -2569,28 +2567,28 @@
                             </div>
                           </div>
                         '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/4" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Tony</p>
                                     </div>
-                                    <p class="m-0">Tony</p>
-                                </div>
-                            </li>
-                            <!-- friend 15 -->
-                            <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
-                                data-bs-target="#singleChat5">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
-                                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
-                                    data-bs-trigger="hover"
-                                    data-bs-content='
+                                </li>
+                                <!-- friend 15 -->
+                                <li class="dropdown-item rounded my-2 px-0" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#singleChat5">
+                                    <!-- avatar -->
+                                    <div class="d-flex align-items-center mx-2 chat-avatar" data-bs-custom-class="chat-box"
+                                        data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left"
+                                        data-bs-trigger="hover"
+                                        data-bs-content='
                       <div>
                         <div class="popover-body d-flex p-2">
                           <div>
@@ -2610,32 +2608,32 @@
                         </div>
                       </div>
                     '
-                                    data-bs-html="true">
-                                    <div class="position-relative">
-                                        <img src="https://source.unsplash.com/random/5" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 38px; height: 38px; object-fit: cover" />
-                                        <span
-                                            class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
-                                            style="left: 75%">
-                                            <span class="visually-hidden"></span>
-                                        </span>
+                                        data-bs-html="true">
+                                        <div class="position-relative">
+                                            <img src="https://source.unsplash.com/random/5" alt="avatar"
+                                                class="rounded-circle me-2"
+                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                            <span
+                                                class="position-absolute bottom-0 translate-middle border border-light rounded-circle bg-success p-1"
+                                                style="left: 75%">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <p class="m-0">Phu</p>
                                     </div>
-                                    <p class="m-0">Phu</p>
-                                </div>
-                            </li>
+                                </li>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- ================= Chat Icon ================= -->
-        <div class="fixed-bottom right-100 p-3" style="z-index: 6; left: initial" type="button"
-            data-bs-toggle="modal" data-bs-target="#newChat">
-            <i class="fas fa-edit bg-white rounded-circle p-3 shadow"></i>
-        </div>
-                @endauth
+            <!-- ================= Chat Icon ================= -->
+            <div class="fixed-bottom right-100 p-3 mb-5" style="z-index: 6; left: initial" type="button"
+                data-bs-toggle="modal" data-bs-target="#newChat">
+                <i class="fas fa-edit bg-white rounded-circle p-3 shadow"></i>
+            </div>
+        @endauth
 
 
     </div>
