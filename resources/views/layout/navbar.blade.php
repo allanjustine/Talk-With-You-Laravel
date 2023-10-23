@@ -107,19 +107,19 @@
             @auth
                 <div class="col d-none d-xl-flex justify-content-center">
                     <!-- home -->
-                    <div class="mx-4 nav__btn nav__btn-active">
+                    <div class="mx-4 nav__btn {{ 'posts' == request()->path() ? 'nav__btn-active' : '' }}">
                         <a href="/posts" class="btn px-4">
                             <i class="fas fa-home text-muted fs-4"></i>
                         </a>
                     </div>
                     <!-- market -->
-                    <div class="mx-4 nav__btn">
+                    <div class="mx-4 nav__btn {{ 'market' == request()->path() ? 'nav__btn-active' : '' }}">
                         <button type="button" class="btn px-4">
                             <i class="fas fa-store text-muted fs-4"></i>
                         </button>
                     </div>
                     <!-- users -->
-                    <div class="mx-4 nav__btn">
+                    <div class="mx-4 nav__btn {{ 'users' == request()->path() ? 'nav__btn-active' : '' }}">
                         <button type="button" class="btn px-4">
                             <a href="/users">
                                 <i type="button" class="position-relative fas fa-users text-muted fs-4">
@@ -134,13 +134,13 @@
                         </button>
                     </div>
                     <!-- gaming -->
-                    <div class="mx-4 nav__btn">
+                    <div class="mx-4 nav__btn {{ 'games' == request()->path() ? 'nav__btn-active' : '' }}">
                         <button type="button" class="btn px-4">
                             <i class="fas fa-gamepad text-muted fs-4"></i>
                         </button>
                     </div>
                     <!-- dashboard -->
-                    <div class="mx-4 nav__btn">
+                    <div class="mx-4 nav__btn {{ 'dashboard' == request()->path() ? 'nav__btn-active' : '' }}">
                         <a href="/dashboard" class="btn px-4">
                             <i class="fas fa-tachometer-alt-slowest text-muted fs-4"></i>
                         </a>
@@ -1155,18 +1155,18 @@
 <div
     class="col d-lg-none d-md-flex justify-content-center shadow navbar fixed-bottom navbar-light bg-light d-flex justify-content-between">
     <!-- home -->
-    <div class="nav__btn nav__btn-active">
+    <div class="nav__btn {{ 'posts' == request()->path() ? 'nav__btn-active' : '' }}">
         <a href="/posts" class="btn">
             <i class="fas fa-home text-muted fs-4"></i>
         </a>
     </div>
-    <div class="nav__btn">
+    <div class="nav__btn {{ 'market' == request()->path() ? 'nav__btn-active' : '' }}">
         <a href="/market" class="btn">
             <i class="fas fa-store text-muted fs-4"></i>
         </a>
     </div>
     @auth
-        <div class="nav__btn">
+        <div class="nav__btn {{ 'users' == request()->path() ? 'nav__btn-active' : '' }}">
             <a href="/users">
                 <i type="button" class="position-relative fas fa-users text-muted fs-4">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -1178,13 +1178,13 @@
             </a>
         </div>
     @endauth
-    <div class="nav__btn">
+    <div class="nav__btn {{ 'games' == request()->path() ? 'nav__btn-active' : '' }}">
         <a href="/games" class="btn">
             <i class="fas fa-gamepad text-muted fs-4"></i>
         </a>
     </div>
     @auth
-        <div class="nav__btn">
+        <div class="nav__btn {{ 'dashboard' == request()->path() ? 'nav__btn-active' : '' }}">
             <a href="/dashboard" class="btn">
                 <i class="fas fa-tachometer-alt-slowest text-muted fs-4"></i>
             </a>

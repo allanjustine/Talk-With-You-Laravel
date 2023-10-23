@@ -16,11 +16,13 @@ class UserController extends Controller
     {
         $search = $request->search;
 
+        $user = auth()->user();
+
         $userCount = User::count();
 
         $users = User::orderBy('id', 'asc')->paginate(10);
 
-        return view('pages.users.index', compact('users', 'search', 'userCount'));
+        return view('pages.users.index', compact('users', 'search', 'userCount', 'user'));
     }
 
     /**

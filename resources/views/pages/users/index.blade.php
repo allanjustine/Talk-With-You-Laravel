@@ -29,27 +29,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($users as $user)
+                            @foreach ($users as $listUser)
                                 <tr>
-                                    <td>{{ $user->id }}</td>
-                                    <td><img src="{{ Storage::url($user->profile_image) }}" alt="Profile Image"
+                                    <td>{{ $listUser->id }}</td>
+                                    <td><img src="{{ Storage::url($listUser->profile_image) }}" alt="Profile Image"
                                             class="img-fluid rounded-circle"
                                             style="width: 70px; height: 70px; border: 3px solid black;"></td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->address }}</td>
-                                    <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->sex }}</td>
+                                    <td>{{ $listUser->name }}</td>
+                                    <td>{{ $listUser->email }}</td>
+                                    <td>{{ $listUser->address }}</td>
+                                    <td>{{ $listUser->phone }}</td>
+                                    <td>{{ $listUser->sex }}</td>
                                     <td>
-                                        @if ($user->bio != null)
-                                            {{ $user->bio }}
+                                        @if ($listUser->bio != null)
+                                            {{ $listUser->bio }}
                                         @else
                                             <i class="far fa-xmark-circle text-danger"></i> No bio yet
                                         @endif
                                     </td>
-                                    <td>{{ $user->age }}</td>
-                                    <td>{{ $user->created_at->format('l, F j, Y g:i A') }} -
-                                        {{ $user->created_at->diffForHumans() }}</td>
+                                    <td>{{ $listUser->age }}</td>
+                                    <td>{{ $listUser->created_at->format('l, F j, Y g:i A') }} -
+                                        {{ $listUser->created_at->diffForHumans() }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -231,10 +231,10 @@
                     <h2 class="modal-title" id="exampleModalLabel">Sign Up</h2>
                     <span class="text-muted fs-7">It's quick and easy.</span>
                 </div>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- body -->
-            <div class="modal-body">
+            <div class="modal-body ml-4">
                 <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

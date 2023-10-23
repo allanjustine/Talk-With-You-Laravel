@@ -803,7 +803,7 @@
                                 <li class="dropdown-item p-1 rounded">
                                     <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
                                         <div class="p-2">
-                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/tSXYIzZlfrS.png"
+                                            <img src="https://cdn-icons-png.flaticon.com/512/4951/4951185.png"
                                                 alt="from fb" class="rounded-circle"
                                                 style="width: 38px; height: 38px; object-fit: cover" />
                                         </div>
@@ -816,7 +816,7 @@
                                 <li class="dropdown-item p-1 rounded">
                                     <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
                                         <div class="p-2">
-                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Im_0d7HFH4n.png"
+                                            <img src="https://cdn-icons-png.flaticon.com/512/166/166258.png"
                                                 alt="from fb" class="rounded-circle"
                                                 style="width: 38px; height: 38px; object-fit: cover" />
                                         </div>
@@ -833,7 +833,7 @@
                                         class="d-flex align-items-center justify-content-between text-decoration-none text-dark">
                                         <div class="d-flex align-items-center justify-content-evenly">
                                             <div class="p-2">
-                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/0gH3vbvr8Ee.png"
+                                                <img src="https://cdn-icons-png.flaticon.com/512/5692/5692284.png"
                                                     alt="from fb" class="rounded-circle"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
                                             </div>
@@ -849,7 +849,7 @@
                                         class="d-flex align-items-center justify-content-between text-decoration-none text-dark">
                                         <div class="d-flex align-items-center justify-content-evenly">
                                             <div class="p-2">
-                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/MN44Sm-CTHN.png"
+                                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAvVBMVEXz9PgquaVBcbn59vsat6Kl2tWb2NLv9PgGtqD3+Pr8+/w4bLeVq9I/crh4lsc5bbaHpMspvKWiuNZCbbo5jbJBdbctsqhsyryx39u/5OHo8vQwqqwzn602l686ibIvsKsruKc8grSFn8vU6+tUxbR4zcE/v62P1crL6Obe7u9ryb2A0MRIwK+e2dM4krE0nK0+fbY+frWUtNI6hrMyo6sqtaY5Z7g/eLbW3+2/zeRUfrzI1OXj6PJhh8CasNKDppwAAAAELElEQVR4nO2da0/iQBSG6Uy1hS7WsRflIlhRFO+uuCi6+/9/1g5QELAXPzDnoHmfxMTkZJrz9EzbM9MmVCoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfh5SVpxNMzno1tC7OLPcTdM/bzjb4SgHh7ZtW5vHdvtH26AojywTejPcQ4fbryJvXWN+GvuGW1E2jApqxUPmido066dxd1gV5YW5a3AB6zw1X0LmIsoGQQlZr0R5TWBoWU0+Q6dPIegyPvd7hh8VM+xzNkO5SzJJGe+m8oxG0L3kKmKTZJLqaXrBZCiPiCap1ecyPKcydAc8hjTPigk2U1tzSVVCyz5jMSTpuufwTNMzOkObpa0ZEJaQpa2RO4SGVp+j+74iFGRpaxzKEnK0Nca3oNa4oRakWvwuoG9rJKmfnqa31NOUZvG7BHVbQ7b4XeASPy8kYUMzg7qtGRD7kW8q0i1+P6Bta+gWvx+4Dcoi0i1+P7CvKQ3pFr9LUL5KJF38LnB7hIY3DIKWvUs3TQeuzYBL2H33bnc4uKUzrEgeCA1/Pj++hoNdFuiuQ3nEci+1XbJHPkffPYFuichmSFdD4n22BVSCk56GRZByq+aEQ5By+cSxANaGhEvg4guxGxcEVUsVRFtFhrTbGAVbbapzly+hWvUCQzUq8Kd9dVH0yV4sovwiqiS4z5VQ7eChwJ92w1Re5SmqRASdvDy1Q4H/cyTy/cm/bnNybqfqOBC5eaq4LoRIcs+NHlrvZg91yd8Cy+w9YXWvs9SKw6w8lS7SJJhdYhVOh0ZxVtS+ol8cyl7/80RNBTXtz3mqeDSLBh0rwyJMh0YZVXTPOT7ek83DtVSUFXpizp1ajSo1jOax4HHdQsXJ/NyI+vrZUYr81VpKrRMvaSjVjhZZagt9518OdpOloD4BJx9R/d+xWB6adFeGDn/XeAQrNeE/DZ91CpqT7vFoRWHieNw9mQatuJ343mpQhK3ZUOu5FYrVoV6QtOP5ce8f/vyqchnWhR/UH5/CsJOM/DW/qUYwSjph+PQgAj8jGD3qYOcxCj4P1Ud7mB5XDxUep+EsmyBDYJ6qVxCcDC0K6r9pSbkNjQNDGMIQhjD86YZ+KV7pMbbasL5/UMZeqeI2G/ovtWoZtYMyxS029Pe+sihwvrPh/ldSq+a3pjA0DQxhmAJDGBoEhjBMgSEMDQJDGKbAEIYGgSEMU2AIQ4PAEIYpMIShQWAIwxQYwtAgMIRhCgw5DaOS1L6/4bgkt00ZHrAZ7hEZvnIZVl9LvoTZkKF4N66ShzOmMOS7DHVub8XJbcTQH3P+dICep0XpbcLQG7/zlXCS3ctfr4CvGeaP9z3/1GEV1OlV3v7t5fKl23w1f/zpAW8B0wSLIDoCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgO/Df38QmP/CL1gcAAAAAElFTkSuQmCC"
                                                     alt="from fb" class="rounded-circle"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
                                             </div>
@@ -865,7 +865,7 @@
                                         class="d-flex align-items-center justify-content-between text-decoration-none text-dark">
                                         <div class="d-flex align-items-center justify-content-evenly">
                                             <div class="p-2">
-                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y-/r/FhOLTyUFKwf.png"
+                                                <img src="https://media.licdn.com/dms/image/C4D12AQFPTSR2j1EaXw/article-cover_image-shrink_720_1280/0/1524760798842?e=2147483647&v=beta&t=djqR8vrzUpKRyJRv8_jLoUHeGn0uYB9wBsLqxHcOEaE"
                                                     alt="from fb" class="rounded-circle"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
                                             </div>
@@ -904,10 +904,10 @@
                                                             <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png"
                                                                 alt="from fb" class="rounded-circle"
                                                                 style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              " />
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                object-fit: cover;
+                                                            " />
                                                         </div>
                                                         <div>
                                                             <p class="m-0">Campus</p>
@@ -916,13 +916,13 @@
                                                     <!-- item 2 -->
                                                     <div class="d-flex align-items-center dropdown-item p-0 m-0">
                                                         <div class="p-2">
-                                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/N7UOh8REweU.png"
+                                                            <img src="data:image/png;base64,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"
                                                                 alt="from fb" class="rounded-circle"
                                                                 style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              " />
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                object-fit: cover;
+                                                            " />
                                                         </div>
                                                         <div>
                                                             <p class="m-0">Events</p>
@@ -931,13 +931,13 @@
                                                     <!-- item 3 -->
                                                     <div class="d-flex align-items-center dropdown-item p-0 m-0">
                                                         <div class="p-2">
-                                                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/hLkEFzsCyXC.png"
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/906/906338.png"
                                                                 alt="from fb" class="rounded-circle"
                                                                 style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              " />
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                object-fit: cover;
+                                                            " />
                                                         </div>
                                                         <div>
                                                             <p class="m-0">Newsfeed</p>
@@ -999,10 +999,10 @@
                                                                         alt="from fb"
                                                                         class="rounded border border-1 border-secondary"
                                                                         style="
-                                    width: 38px;
-                                    height: 38px;
-                                    object-fit: cover;
-                                  " />
+                                                                        width: 38px;
+                                                                        height: 38px;
+                                                                        object-fit: cover;
+                                                                    " />
                                                                 </div>
                                                                 <div>
                                                                     <p class="m-0">Lorem Ipsum</p>
@@ -1028,10 +1028,10 @@
                                                                         alt="from fb"
                                                                         class="rounded border border-1 border-secondary"
                                                                         style="
-                                    width: 38px;
-                                    height: 38px;
-                                    object-fit: cover;
-                                  " />
+                                                                        width: 38px;
+                                                                        height: 38px;
+                                                                        object-fit: cover;
+                                                                    " />
                                                                 </div>
                                                                 <div>
                                                                     <p class="m-0">Lorem Ipsum</p>
@@ -1057,10 +1057,10 @@
                                                                         alt="from fb"
                                                                         class="rounded border border-1 border-secondary"
                                                                         style="
-                                    width: 38px;
-                                    height: 38px;
-                                    object-fit: cover;
-                                  " />
+                                                                        width: 38px;
+                                                                        height: 38px;
+                                                                        object-fit: cover;
+                                                                    " />
                                                                 </div>
                                                                 <div>
                                                                     <p class="m-0">Lorem Ipsum</p>
@@ -1158,10 +1158,10 @@
                                                             <img src="https://source.unsplash.com/random/4" alt="from fb"
                                                                 class="rounded border border-1 border-secondary"
                                                                 style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              " />
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                object-fit: cover;
+                                                            " />
                                                         </div>
                                                         <div>
                                                             <p class="m-0">Campus</p>
@@ -1173,10 +1173,10 @@
                                                             <img src="https://source.unsplash.com/random/5" alt="from fb"
                                                                 class="rounded border border-1 border-secondary"
                                                                 style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              " />
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                object-fit: cover;
+                                                            " />
                                                         </div>
                                                         <div>
                                                             <p class="m-0">Events</p>
@@ -1188,10 +1188,10 @@
                                                             <img src="https://source.unsplash.com/random/6" alt="from fb"
                                                                 class="rounded border border-1 border-secondary"
                                                                 style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              " />
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                object-fit: cover;
+                                                            " />
                                                         </div>
                                                         <div>
                                                             <p class="m-0">Newsfeed</p>
@@ -1219,11 +1219,11 @@
                     <div class="d-flex flex-column justify-content-center w-100 mx-auto" style="max-width: 680px">
                         <!-- stories -->
                         @auth
-                            <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel"
+                            <div id="carouselExampleControls1" class="carousel slide carousel-fade" data-bs-ride="carousel"
                                 data-bs-interval="false">
                                 <div class="carousel-inner">
                                     <!-- Carousel Item 1 -->
-                                    <div class="carousel-item">
+                                    <div class="carousel-item active">
                                         <div class="mt-5 d-flex justify-content-between position-relative">
                                             <!-- s 1 -->
                                             <div class="mx-1 bg-white rounded story" type="button"
@@ -1271,7 +1271,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item">
                                         <div class="mt-5 d-flex justify-content-between position-relative">
                                             <!-- s 7 -->
                                             <div class="rounded mx-1 story" type="button" style="width: 6em; height: 190px">
@@ -1385,7 +1385,7 @@
                                 </div>
                                 <!-- slider desktop -->
                                 <div class="d-none d-lg-block" style="max-width: 450px">
-                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                                    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel"
                                         data-bs-interval="false">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
@@ -1418,31 +1418,31 @@
                                                     style="width: 38px; height: 38px; object-fit: cover" />
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/10" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/2" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/12" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/3" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/13" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/4" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/14" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/5" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/15" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/6" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/16" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/7" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/17" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/8" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/18" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                                <img src="https://source.unsplash.com/random/9" alt="avatar"
+                                                <img src="https://source.unsplash.com/random/19" alt="avatar"
                                                     class="rounded-circle me-2"
                                                     style="width: 38px; height: 38px; object-fit: cover" />
                                             </div>
