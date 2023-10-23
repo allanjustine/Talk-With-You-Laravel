@@ -1130,12 +1130,16 @@
                     </ul>
                 @endauth
                 @guest
-                    <div class="col d-flex align-items-center justify-content-end">
+                    <div class="col d-none d-md-flex align-items-center justify-content-end">
                         <input type="email" class="form-control" placeholder="Email address" />
                         <input type="password" class="form-control ml-2" placeholder="Password" />
-                        <button class="btn btn-primary w-100 ml-2">Log In</button>
+                        <a href="/login" class="btn btn-primary form-control ml-2">Log In</a>
                         <button class="btn w-100 ml-2 text-primary">Forgot Account?</button>
                     </div>
+                    <div class="col d-sm-flex d-md-none align-items-center justify-content-end">
+                        <a href="/login" class="btn btn-primary">Log In Here</a>
+                    </div>
+
                 @endguest
                 <!-- end -->
             </div>
