@@ -8,12 +8,16 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function profilePage(User $user)
+    public function profilePage(User $user, Request $request)
     {
+
+        $search = $request->search;
 
         $user = auth()->user();
 
-        return view('pages.profile_settings.profile', compact('user'));
+        $userCount = User::count();
+
+        return view('pages.profile_settings.profile', compact('user', 'search', 'userCount'));
     }
 
     public function update(Request $request, User $user)

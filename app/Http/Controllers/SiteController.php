@@ -19,15 +19,19 @@ class SiteController extends Controller
         return view('pages.welcome');
     }
 
-    public function dashboard(User $user)
+    public function dashboard(User $user, Request $request)
     {
         $user = auth()->user();
 
+        $search = $request->search;
+
         $usersCount = User::count();
+
+        $userCount = User::count();
 
         $postsCount = Post::where('user_id', auth()->id())->count();
 
-        return view('pages.users.dashboard', compact('usersCount', 'postsCount', 'user'));
+        return view('pages.users.dashboard', compact('usersCount', 'postsCount', 'user', 'search', 'userCount'));
     }
 
     /**

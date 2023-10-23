@@ -12,11 +12,15 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
 
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->search;
+
+        $userCount = User::count();
+
         $users = User::orderBy('id', 'asc')->paginate(10);
 
-        return view('pages.users.index', compact('users'));
+        return view('pages.users.index', compact('users', 'search', 'userCount'));
     }
 
     /**

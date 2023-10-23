@@ -26,7 +26,7 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (auth()->attempt($credentials)) {
-            return redirect('/dashboard');
+            return redirect('/posts');
         }
 
         return back()->withInput()->with('error', 'Invalid Credentials')->withErrors(['email' => ' ', 'password' => ' ']);

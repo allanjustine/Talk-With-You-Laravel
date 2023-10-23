@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" style="margin-left: 37%;"><b>Edit post</b></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -23,7 +23,8 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    <select name="category_id" id="category_id" class="form-control">
+
+                    <select name="category_id" id="category_id" class="form-select">
                         <option value="" selected hidden>Feeling/activity</option>
                         <option disabled>Feeling/activity</option>
                         @foreach ($categories as $category)

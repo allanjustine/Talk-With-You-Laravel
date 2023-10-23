@@ -1,7 +1,11 @@
 @extends('layout.base')
 
 @section('title')
-    {{ $search }}
+    @if (!$search)
+        Search
+    @else
+        {{ $search }}
+    @endif
 @endsection
 
 

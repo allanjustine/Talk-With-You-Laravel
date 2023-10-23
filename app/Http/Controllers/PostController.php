@@ -21,6 +21,8 @@ class PostController extends Controller
 
         $search = $request->search;
 
+        $userCount = User::count();
+
         $posts = Post::where(function ($query) use ($search) {
             $query->where('content', 'like', "%$search%");
         })
@@ -33,40 +35,53 @@ class PostController extends Controller
             ->with('comments')->get();
 
 
-        return view('pages.posts.searched', compact('posts', 'search', 'user', 'post'));
+        return view('pages.posts.searched', compact('posts', 'search', 'user', 'post', 'userCount'));
     }
 
-    public function index(User $user, Post $post, Like $like)
+    public function index(User $user, Post $post, Like $like, Request $request)
     {
         $user = auth()->user();
 
+        $search = $request->search;
+
         $categories = Category::all();
+
+        $userCount = User::count();
 
         $posts = Post::orderBy('created_at', 'desc')->with('category')->get();
 
-        return view('pages.posts.index', compact('categories', 'posts', 'user', 'post', 'like'));
+        return view('pages.posts.index', compact('categories', 'posts', 'user', 'post', 'like', 'search', 'userCount'));
     }
 
 
-    public function myPosts(Post $post, User $user)
+    public function myPosts(Post $post, User $user, Request $request)
     {
         $user = auth()->user();
+
+        $search = $request->search;
 
         $categories = Category::all();
 
+        $userCount = User::count();
+
         $my_posts = Post::orderBy('created_at', 'desc')->where('user_id', auth()->id())->with('category')->get();
 
-        return view('pages.users.posts', compact('categories', 'my_posts', 'post', 'user'));
+        return view('pages.users.posts', compact('categories', 'my_posts', 'post', 'user', 'search', 'userCount'));
     }
 
-    public function userPosts($userId)
+    public function userPosts(Request $request, $userId)
     {
         $user = auth()->user();
 
+        $search = $request->search;
+
+        $userCount = User::count();
+
         $userPosts = Post::orderBy('created_at', 'desc')->where('user_id', $userId)->with('category')->get();
+
         $users = User::where('id', $userId)->get();
 
-        return view('pages.posts.user-posts', compact('userPosts', 'user', 'users'));
+        return view('pages.posts.user-posts', compact('userPosts', 'user', 'users', 'userCount', 'search'));
     }
 
     /**

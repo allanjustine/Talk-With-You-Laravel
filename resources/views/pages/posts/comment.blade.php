@@ -12,7 +12,8 @@
             <div class="modal-body" @if (count($post->post_image) != 0) style="height: 600px;" @endif>
                 <h5>{{ $post->content }}</h5>
                 <div>
-                    <div id="click" class="carousel slide" data-bs-ride="carousel">
+                    <div id="click{{ $post->id }}" class="carousel slide" data-bs-ride="carousel"
+                        data-bs-interval="false">
                         <div class="carousel-inner">
                             @foreach ($post->post_image as $index => $imagePath)
                                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}" data-bs-interval="10000">
@@ -21,16 +22,16 @@
                                 </div>
                             @endforeach
                         </div>
-                        {{-- <button class="carousel-control-prev" type="button" data-bs-target="#click"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#click{{ $post->id }}"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#click"
+                        <button class="carousel-control-next" type="button" data-bs-target="#click{{ $post->id }}"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                        </button> --}}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -68,7 +69,8 @@
             <div class="px-4 py-2">
                 <div class="d-flex justify-content-between align-items-center border-top border-bottom">
                     @if (auth()->check() && $post->likes->contains('user_id', auth()->id()))
-                        <form action="{{ route('post.unlike', $post->likes->where('user_id', auth()->id())->first()) }}"
+                        <form
+                            action="{{ route('post.unlike', $post->likes->where('user_id', auth()->id())->first()) }}"
                             method="POST">
                             @csrf
                             @method('DELETE')

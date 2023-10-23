@@ -9,12 +9,16 @@ use Illuminate\Support\Facades\Hash;
 
 class PasswordController extends Controller
 {
-    public function passwordPage(User $user)
+    public function passwordPage(User $user, Request $request)
     {
 
         $user = auth()->user();
 
-        return view('pages.profile_settings.password', compact('user'));
+        $search = $request->search;
+
+        $userCount = User::count();
+
+        return view('pages.profile_settings.password', compact('user', 'search', 'userCount'));
     }
 
     public function updatePassword(Request $request, User $user)

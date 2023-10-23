@@ -21,7 +21,8 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    <select name="category_id" id="category_id" class="form-control">
+
+                    <select name="category_id" id="category_id" class="form-select">
                         <option value="" selected hidden>Feeling/activity</option>
                         <option disabled>Feeling/activity</option>
                         @foreach ($categories as $category)
