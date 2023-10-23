@@ -1,5 +1,5 @@
 <!-- ================= Appbar ================= -->
-<div class="bg-white d-flex align-items-center shadow" style="min-height: 56px; z-index: 5">
+<div class="bg-white d-flex align-items-center sticky-top shadow" style="min-height: 56px; z-index: 5">
     <div class="container-fluid">
         <div class="row align-items-center">
             <!-- search -->
@@ -105,7 +105,6 @@
             </div>
             <!-- nav -->
             @auth
-
                 <div class="col d-none d-xl-flex justify-content-center">
                     <!-- home -->
                     <div class="mx-4 nav__btn nav__btn-active">
@@ -689,7 +688,13 @@
                     <div class="rounded-circle p-1 bg-gray d-flex align-items-center justify-content-center mx-2"
                         style="width: 38px; height: 38px" type="button" id="notMenu" data-bs-toggle="dropdown"
                         aria-expanded="false" data-bs-auto-close="outside">
-                        <i class="fas fa-bell"></i>
+                        <i class="fas fa-bell position-relative">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="font-size: 0.5rem">
+                                {{ $unreadCount = auth()->user()->unreadNotifications()->count() }}
+                                <span class="visually-hidden"></span>
+                            </span>
+                        </i>
                     </div>
                     <!-- notifications dd -->
                     <ul class="dropdown-menu border-0 shadow p-3" aria-labelledby="notMenu"
@@ -1148,7 +1153,7 @@
 </div>
 
 <div
-    class="col d-lg-none d-md-flex justify-content-center sticky-top shadow navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+    class="col d-lg-none d-md-flex justify-content-center shadow navbar fixed-bottom navbar-light bg-light d-flex justify-content-between">
     <!-- home -->
     <div class="nav__btn nav__btn-active">
         <a href="/posts" class="btn">
@@ -1160,27 +1165,31 @@
             <i class="fas fa-store text-muted fs-4"></i>
         </a>
     </div>
-    <div class="nav__btn">
-        <a href="/users">
-            <i type="button" class="position-relative fas fa-users text-muted fs-4">
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                    style="font-size: 0.5rem">
-                    {{ $userCount }}
-                    <span class="visually-hidden"></span>
-                </span>
-            </i>
-        </a>
-    </div>
+    @auth
+        <div class="nav__btn">
+            <a href="/users">
+                <i type="button" class="position-relative fas fa-users text-muted fs-4">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.5rem">
+                        {{ $userCount }}
+                        <span class="visually-hidden"></span>
+                    </span>
+                </i>
+            </a>
+        </div>
+    @endauth
     <div class="nav__btn">
         <a href="/games" class="btn">
             <i class="fas fa-gamepad text-muted fs-4"></i>
         </a>
     </div>
-    <div class="nav__btn">
-        <a href="/dashboard" class="btn">
-            <i class="fas fa-tachometer-alt-slowest text-muted fs-4"></i>
-        </a>
-    </div>
+    @auth
+        <div class="nav__btn">
+            <a href="/dashboard" class="btn">
+                <i class="fas fa-tachometer-alt-slowest text-muted fs-4"></i>
+            </a>
+        </div>
+    @endauth
 </div>
 
 
