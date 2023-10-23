@@ -9,7 +9,7 @@
         <h5 class="mt-4">Dashboard</h5>
 
         <div class="row mt-5">
-            <div class="col-md-4">
+            <div class="col-md-4 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card mt-5">
             <div class="card-header">
                 <h5 class="text-center text-muted">Account History</h5>
             </div>
