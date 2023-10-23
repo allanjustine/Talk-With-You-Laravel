@@ -14,7 +14,8 @@
 
         <div class="text-center mt-0 pt-0 mt-lg-5 pt-lg-5 d-sm-block d-lg-none">
             <h1 class="text-primary fw-bold">Talk With You</h3>
-            <p class="w-75 mx-auto fs-4 mx-lg-0">Talk With You helps you connect and share with the people in your life.</p>
+                <p class="w-75 mx-auto fs-4 mx-lg-0">Talk With You helps you connect and share with the people in your life.
+                </p>
         </div>
 
         <!-- form card -->
@@ -95,6 +96,18 @@
                         <a class="btn btn-success" href="#" data-bs-toggle="modal"
                             data-bs-target="#createModal">{{ __('Create a new account') }}</a>
                     </div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible fade show mt-2 py-3 text-center" role="alert">
+                            <ul style="padding: 0; text-align: left;">
+                                @foreach ($errors->all() as $error)
+                                    <li>
+                                        <strong>{{ $error }}</strong>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                 </form>
             </div>
             <!-- tag -->
@@ -135,11 +148,11 @@
 
 <script>
     function togglePasswordVisibility() {
-        const passwordInput = document.getElementById("password");
-        if (passwordInput.type === "password") {
+        const passwordInput = document.getElementById("logPass");
+        if (passwordInput.type === "logPass") {
             passwordInput.type = "text";
         } else {
-            passwordInput.type = "password";
+            passwordInput.type = "logPass";
         }
     }
 </script>

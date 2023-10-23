@@ -10,34 +10,57 @@
         @include('pages.posts.create')
     @endauth
     <div>
-        <div class="container">
+        <div class="d-flex flex-column justify-content-center w-100 mx-auto" style="max-width: 680px">
             <h5 class="mt-4"><img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="Profile Image"
                     class="img-fluid rounded-circle" style="width: 70px; height: 70px; border: 3px solid black;">
                 {{ auth()->user()->name }}</h5>
-        </div>
-        <hr>
-        @if (session('message'))
-            <div class="alert alert-success alert-dismissible fade show mt-3 py-3 text-center" role="alert">
-                {{ session('message') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('error'))
-            <div class="alert alert-danger alert-dismissible fade show mt-3 py-3 text-center" role="alert">
-                {{ session('error') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @auth
-            <div class="container">
-                <div class="d-flex" type="button">
-                    <div class="p-1">
-                        <img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="avatar" class="rounded-circle me-2"
-                            style="width: 38px; height: 38px; object-fit: cover" />
+                <hr>
+                @if (session('message'))
+                    <div class="alert alert-success alert-dismissible fade show mt-3 py-3 text-center" role="alert">
+                        {{ session('message') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <input type="text" class="form-control rounded-pill border-0 bg-gray pointer"
-                        placeholder="What's on your mind, {{ auth()->user()->name }}?" data-bs-toggle="modal"
-                        data-bs-target="#addPost" readonly id="input-area" />
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show mt-3 py-3 text-center" role="alert">
+                        {{ session('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+        </div>
+        @auth
+            <div class="d-flex flex-column justify-content-center w-100 mx-auto" style="max-width: 680px">
+                <div class="bg-white p-3 mt-3 rounded border shadow">
+                    <!-- avatar -->
+                    <div class="d-flex" type="button">
+                        <div class="p-1">
+                            <img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="avatar" class="rounded-circle me-2"
+                                style="width: 38px; height: 38px; object-fit: cover" />
+                        </div>
+                        <input type="text" class="form-control rounded-pill border-0 bg-gray pointer"
+                            placeholder="What's on your mind, {{ auth()->user()->name }}?" data-bs-toggle="modal"
+                            data-bs-target="#addPost" readonly id="input-area" />
+                    </div>
+
+                    <hr />
+                    <!-- actions -->
+                    <div class="d-flex flex-column flex-lg-row mt-3">
+                        <!-- a 1 -->
+                        <div class="dropdown-item rounded d-flex align-items-center justify-content-center" type="button">
+                            <i class="fas fa-video me-2 text-danger"></i>
+                            <p class="m-0 text-muted">Live Video</p>
+                        </div>
+                        <!-- a 2 -->
+                        <div class="dropdown-item rounded d-flex align-items-center justify-content-center" type="button">
+                            <i class="fas fa-photo-video me-2 text-success"></i>
+                            <p class="m-0 text-muted">Photo/Video</p>
+                        </div>
+                        <!-- a 3 -->
+                        <div class="dropdown-item rounded d-flex align-items-center justify-content-center" type="button">
+                            <i class="fas fa-smile me-2 text-warning"></i>
+                            <p class="m-0 text-muted">Feeling/Activity</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         @endauth
@@ -119,7 +142,8 @@
                         <h5 class="mt-4">{{ $post->content }}</h5>
                         @if (is_array($post->post_image) && count($post->post_image) > 0)
                             @if (count($post->post_image) == 1)
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#commentPost{{ $post->id }}">
+                                <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#commentPost{{ $post->id }}">
                                     <img src="{{ Storage::url($post->post_image[0]) }}" style="width: 100%;"
                                         alt="post image">
                                 </a>

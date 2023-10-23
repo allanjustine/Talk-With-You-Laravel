@@ -19,6 +19,8 @@ class PostController extends Controller
     {
         $user = auth()->user();
 
+        $categories = Category::all();
+
         $search = $request->search;
 
         $userCount = User::count();
@@ -35,7 +37,7 @@ class PostController extends Controller
             ->with('comments')->get();
 
 
-        return view('pages.posts.searched', compact('posts', 'search', 'user', 'post', 'userCount'));
+        return view('pages.posts.searched', compact('posts', 'search', 'user', 'post', 'userCount', 'categories'));
     }
 
     public function index(User $user, Post $post, Like $like, Request $request)
@@ -75,13 +77,15 @@ class PostController extends Controller
 
         $search = $request->search;
 
+        $categories = Category::all();
+
         $userCount = User::count();
 
         $userPosts = Post::orderBy('created_at', 'desc')->where('user_id', $userId)->with('category')->get();
 
         $users = User::where('id', $userId)->get();
 
-        return view('pages.posts.user-posts', compact('userPosts', 'user', 'users', 'userCount', 'search'));
+        return view('pages.posts.user-posts', compact('userPosts', 'user', 'users', 'userCount', 'search', 'categories'));
     }
 
     /**

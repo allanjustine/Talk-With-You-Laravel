@@ -20,7 +20,7 @@ class LoginController extends Controller
     {
         $request->validate([
             'email'         =>          ['required', 'email', 'max:255'],
-            'password'      =>          ['required', 'max:255']
+            'password'      =>          ['required', 'max:20', 'min:6']
         ]);
 
         $credentials = $request->only('email', 'password');

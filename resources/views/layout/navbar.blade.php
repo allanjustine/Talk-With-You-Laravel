@@ -890,7 +890,7 @@
                                 </div>
                             </li>
                         </a>
-                        <hr />
+                        <div class="dropdown-divider"></div>
                         <!-- feedback -->
                         <li class="dropdown-item p-1 rounded d-flex align-items-center" type="button">
                             <i class="fas fa-exclamation-circle bg-gray p-2 rounded-circle"></i>
@@ -901,7 +901,7 @@
                                 </p>
                             </div>
                         </li>
-                        <hr />
+                        <div class="dropdown-divider"></div>
                         <!-- options -->
                         <!-- 1 -->
                         <li class="dropdown-item p-1 my-3 rounded" type="button">

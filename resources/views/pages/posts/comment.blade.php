@@ -9,7 +9,7 @@
                 </button>
             </div>
             @csrf
-            <div class="modal-body" @if (count($post->post_image) != 0) style="height: 600px;" @endif>
+            <div class="modal-body" @if (count($post->post_image) != 0) style="height: auto;" @endif>
                 <h5>{{ $post->content }}</h5>
                 <div>
                     <div id="click{{ $post->id }}" class="carousel slide" data-bs-ride="carousel"

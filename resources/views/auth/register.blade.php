@@ -340,7 +340,7 @@
 
                     <div class="row col-12">
                         <div class="form-group col-md-6 col-sm-6">
-                            <label for="sex">{{ __('Sex') }}</label>
+                            <label for="sex">{{ __('Gender') }}</label>
                             <select class="form-control @error('sex') is-invalid @enderror" name="sex"
                                 id="sex" name="sex" required autocomplete="sex" autofocus>
                                 <option selected hidden value="">Select Gender</option>

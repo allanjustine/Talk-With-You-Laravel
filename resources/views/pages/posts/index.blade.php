@@ -10,18 +10,20 @@
         @include('pages.posts.create')
     @endauth
     <div class="position-relative">
-        @if (session('message'))
-            <div class="alert alert-success alert-dismissible fade show mt-3 py-3 text-center" role="alert">
-                {{ session('message') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('error'))
-            <div class="alert alert-danger alert-dismissible fade show mt-3 py-3 text-center" role="alert">
-                {{ session('error') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
+        <div class="d-flex flex-column justify-content-center w-100 mx-auto" style="max-width: 680px">
+            @if (session('message'))
+                <div class="alert alert-success alert-dismissible fade show mt-3 py-3 text-center" role="alert">
+                    {{ session('message') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger alert-dismissible fade show mt-3 py-3 text-center" role="alert">
+                    {{ session('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+        </div>
 
         {{-- <div class="d-flex justify-content-center">
             <div class="card col-md-6 col-sm-6 p-3 mt-3">

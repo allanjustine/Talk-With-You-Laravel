@@ -28,8 +28,8 @@ class RegisterController extends Controller
             'phone'                     =>          ['required', 'numeric', 'digits:11', 'regex:/^09\d{9}$/'],
             'sex'                       =>          ['required', 'max:255'],
             'email'                     =>          ['required', 'max:255', 'email', 'unique:users,email'],
-            'password'                  =>          ['required', 'max:255', 'confirmed'],
-            'password_confirmation'     =>          ['required', 'max:255'],
+            'password'                  =>          ['required', 'confirmed', 'max:20', 'min:6'],
+            'password_confirmation'     =>          ['required', 'max:20', 'min:6'],
             'profile_image'             =>          ['max:2048']
         ]);
 
@@ -50,7 +50,7 @@ class RegisterController extends Controller
 
             Storage::disk('public')->put('/images/profile_pictures/' . $fileName, $imageContents);
 
-            $imagePath = 'images/profile_pictures/' .$fileName;
+            $imagePath = 'images/profile_pictures/' . $fileName;
         }
 
         $user = User::create([
@@ -63,7 +63,6 @@ class RegisterController extends Controller
             'email'             =>             $request->email,
             'password'          =>             bcrypt($request->password)
         ]);
-
-        return redirect('/login')->with('message', 'Account -' . $user->email . '- registered successfully');
+        return back()->with('message', 'Account -' . $user->email . '- registered successfully');
     }
 }
