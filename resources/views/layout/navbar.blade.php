@@ -689,11 +689,13 @@
                         style="width: 38px; height: 38px" type="button" id="notMenu" data-bs-toggle="dropdown"
                         aria-expanded="false" data-bs-auto-close="outside">
                         <i class="fas fa-bell position-relative">
+                            @if ($unreadCount = auth()->user()->unreadNotifications()->count() != 0)
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                style="font-size: 0.5rem">
-                                {{ $unreadCount = auth()->user()->unreadNotifications()->count() }}
-                                <span class="visually-hidden"></span>
-                            </span>
+                            style="font-size: 0.5rem">
+                            {{ $unreadCount = auth()->user()->unreadNotifications()->count() }}
+                            <span class="visually-hidden"></span>
+                        </span>
+                            @endif
                         </i>
                     </div>
                     <!-- notifications dd -->
