@@ -37,9 +37,14 @@
                             </div>
                             <!-- text -->
                             <div>
-                                <textarea name="content" id="text-area" cols="30" rows="5" class="form-control mb-3 mt-2"
+                                <textarea name="content" id="text-area" cols="30" rows="5" class="form-control mb-3 mt-2 @error('content') is-invalid @enderror"
                                     placeholder="What's on your mind, {{ auth()->user()->name }}?" autocomplete="content" autofocus required></textarea>
                             </div>
+                            @error('content')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             <!-- emoji  -->
                             <div class="d-flex justify-content-between align-items-center">
                                 <img src="https://www.facebook.com/images/composer/SATP_Aa_square-2x.png"
@@ -51,6 +56,7 @@
                               " />
                                 <i class="far fa-laugh-wink fs-5 text-muted pointer"></i>
                             </div>
+
                             <!-- options -->
                             <input id="post_image" type="file"
                                 class="form-control mt-2 pr-4 mb-1 @error('post_image') is-invalid @enderror"
@@ -73,6 +79,7 @@
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
+                                <option value="">Remove</option>
                             </select>
                             <div class="d-flex justify-content-between border border-1 border-light rounded p-3 mt-3">
                                 <p class="m-0">Add to your post</p>

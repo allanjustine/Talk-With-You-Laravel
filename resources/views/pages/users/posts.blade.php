@@ -30,8 +30,8 @@
             <div class="d-flex justify-content-center mb-5">
                 <div class="card col-md-6 col-sm-6 p-3">
                     <input type="text" class="form-control" readonly style="border-radius: 20px; cursor: pointer;"
-                        placeholder="What's on your mind, {{ auth()->user()->name }}?" data-toggle="modal"
-                        data-target="#addPost" id="input-area">
+                        placeholder="What's on your mind, {{ auth()->user()->name }}?" data-bs-toggle="modal"
+                        data-bs-target="#addPost" id="input-area">
                 </div>
             </div>
         @endauth
@@ -45,17 +45,17 @@
                 <div class="card col-md-6 col-sm-6">
                     <div class="body px-2 py-3">
                         <div class="dropdown">
-                            <a class="btn float-right" href="#" id="menu-button" data-toggle="dropdown"
+                            <a class="btn float-right" href="#" id="menu-button" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" style="cursor: pointer;"
                                 data-postid="{{ $post->id }}"><i class="far fa-ellipsis-vertical"></i></a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 @if (auth()->check() && auth()->user()->id == $post->user->id)
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#profileEditPost{{ $post->id }}"><i
+                                    <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#profileEditPost{{ $post->id }}"><i
                                             class="far fa-pen-to-square"></i>
                                         Edit</a>
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i> Delete</a>
+                                    <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i> Delete</a>
                                 @else
                                     <a class="dropdown-item" href="#"><i class="far fa-bookmark"></i> Save</a>
                                     <a class="dropdown-item" href="#"><i class="far fa-flag"></i> Report</a>
@@ -112,7 +112,7 @@
                         <h5 class="mt-4">{{ $post->content }}</h5>
                         @if (is_array($post->post_image) && count($post->post_image) > 0)
                             @if (count($post->post_image) == 1)
-                                <a href="#" data-toggle="modal" data-target="#commentPost{{ $post->id }}">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#commentPost{{ $post->id }}">
                                     <img src="{{ Storage::url($post->post_image[0]) }}" style="width: 100%;"
                                         alt="post image">
                                 </a>
@@ -121,8 +121,8 @@
                                     @foreach ($post->post_image as $index => $imagePath)
                                         <div class="col-md-6 col-sm-6 col-6">
                                             <div class="mb-4">
-                                                <a href="#" data-toggle="modal"
-                                                    data-target="#commentPost{{ $post->id }}">
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#commentPost{{ $post->id }}">
                                                     <img src="{{ Storage::url($imagePath) }}" class="img-fluid"
                                                         alt="post image">
                                                 </a>
@@ -134,8 +134,8 @@
                                 <div class="row">
                                     {{-- Large Image on the Left (for larger screens) --}}
                                     <div class="col-md-8 col-sm-8 col-8">
-                                        <a href="#" data-toggle="modal"
-                                            data-target="#commentPost{{ $post->id }}">
+                                        <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#commentPost{{ $post->id }}">
                                             <img src="{{ Storage::url($post->post_image[0]) }}" class="img-fluid"
                                                 alt="post image">
                                         </a>
@@ -144,8 +144,8 @@
                                         @foreach ($post->post_image as $index => $imagePath)
                                             @if ($index > 0 && $index <= 3)
                                                 <div class="mb-4">
-                                                    <a href="#" data-toggle="modal"
-                                                        data-target="#commentPost{{ $post->id }}">
+                                                    <a href="#" data-bs-toggle="modal"
+                                                        data-bs-target="#commentPost{{ $post->id }}">
                                                         <img src="{{ Storage::url($imagePath) }}" class="img-fluid"
                                                             alt="post image" style="height: 130px; width: 130px;">
                                                     </a>
@@ -155,8 +155,8 @@
 
                                         @if (count($post->post_image) > 4)
                                             <div class="col-md-12 col-sm-4">
-                                                <a href="#" data-toggle="modal"
-                                                    data-target="#commentPost{{ $post->id }}">
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#commentPost{{ $post->id }}">
                                                     <div class="img-fluid"
                                                         style="position: absolute; margin-top: -154px; margin-left: -15px; background-color: rgba(80, 82, 82, 0.473); height: 130px; width: 130px;">
                                                         <h1 class="text-center text-white align-items-center"
@@ -228,8 +228,8 @@
                                 </form>
                             @endif
                             <div>
-                                <button class="btn" data-toggle="modal"
-                                    data-target="#commentPost{{ $post->id }}"><i class="far fa-comment"></i>
+                                <button class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#commentPost{{ $post->id }}"><i class="far fa-comment"></i>
                                     Comment</button>
                             </div>
                             <div>
