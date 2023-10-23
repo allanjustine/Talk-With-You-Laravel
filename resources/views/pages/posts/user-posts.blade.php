@@ -12,29 +12,33 @@
 
 
 @section('content')
-    <div class="container">
-        <h5 class="mt-4">
-            @if ($userPosts->count() === 0)
-                <p class="text-muted text-center">
-                    @foreach ($users as $user)
-                        <h5 class="mt-4"><img src="{{ Storage::url($user->profile_image) }}" alt="Profile Image"
-                                class="img-fluid rounded-circle" style="width: 70px; height: 70px; border: 3px solid black;">
-                            {{ $user->name }}</h5>
-                    @endforeach
-                </p>
-            @else
-                <img src="{{ Storage::url($userPosts->first()->user->profile_image) }}" alt="Profile Image"
-                    class="img-fluid rounded-circle mt-2" style="width: 50px; height: 50px; border: 3px solid black;"></a>
-                {{ $userPosts->first()->user->name }}&apos;s posts
-            @endif
-        </h5>
+    <div>
+        <div class="container">
+            <h5 class="mt-4">
+                @if ($userPosts->count() === 0)
+                    <p class="text-muted text-center">
+                        @foreach ($users as $user)
+                            <h5 class="mt-4"><img src="{{ Storage::url($user->profile_image) }}" alt="Profile Image"
+                                    class="img-fluid rounded-circle"
+                                    style="width: 70px; height: 70px; border: 3px solid black;">
+                                {{ $user->name }}</h5>
+                        @endforeach
+                    </p>
+                @else
+                    <img src="{{ Storage::url($userPosts->first()->user->profile_image) }}" alt="Profile Image"
+                        class="img-fluid rounded-circle mt-2"
+                        style="width: 50px; height: 50px; border: 3px solid black;"></a>
+                    {{ $userPosts->first()->user->name }}&apos;s posts
+                @endif
+            </h5>
+        </div>
         <hr>
         @foreach ($userPosts as $post)
             @auth
                 @include('pages.posts.comment')
             @endauth
             <div class="d-flex justify-content-center mt-3">
-                <div class="card col-md-6 col-sm-6">
+                <div class="card col-md-6 col-sm-6 border-0">
                     <div class="body px-2 py-3">
                         <div class="dropdown">
                             <a class="btn float-right" href="#" id="menu-button" data-bs-toggle="dropdown"
@@ -46,7 +50,8 @@
                                         data-bs-target="#editPost{{ $post->id }}"><i class="far fa-pen-to-square"></i>
                                         Edit</a>
                                     <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                        data-bs-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i> Delete</a>
+                                        data-bs-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i>
+                                        Delete</a>
                                 @else
                                     <a class="dropdown-item" href="#"><i class="far fa-bookmark"></i> Save</a>
                                     <a class="dropdown-item" href="#"><i class="far fa-flag"></i> Report</a>

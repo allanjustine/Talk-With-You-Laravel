@@ -10,8 +10,8 @@
 
 
 @section('content')
-    <div class="container">
-        <div class="d-flex justify-content-center">
+    <div>
+        {{-- <div class="d-flex justify-content-center">
             <div class="card col-md-6 col-sm-6 p-3 mt-3">
                 <div class="form-group mt-3">
                     <form action="{{ route('search') }}" method="GET">
@@ -25,14 +25,13 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <hr>
+        </div> --}}
         @foreach ($posts as $post)
             @auth
                 @include('pages.posts.comment')
             @endauth
             <div class="d-flex justify-content-center mt-3">
-                <div class="card col-md-6 col-sm-6">
+                <div class="card col-md-6 col-sm-6 border-0">
                     <div class="body px-2 py-3">
                         <div class="dropdown">
                             <a class="btn float-right" href="#" id="menu-button" data-toggle="dropdown"

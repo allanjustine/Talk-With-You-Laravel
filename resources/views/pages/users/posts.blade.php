@@ -9,10 +9,12 @@
     @auth
         @include('pages.posts.create')
     @endauth
-    <div class="container">
-        <h5 class="mt-4"><img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="Profile Image"
-                class="img-fluid rounded-circle" style="width: 70px; height: 70px; border: 3px solid black;">
-            {{ auth()->user()->name }}</h5>
+    <div>
+        <div class="container">
+            <h5 class="mt-4"><img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="Profile Image"
+                    class="img-fluid rounded-circle" style="width: 70px; height: 70px; border: 3px solid black;">
+                {{ auth()->user()->name }}</h5>
+        </div>
         <hr>
         @if (session('message'))
             <div class="alert alert-success alert-dismissible fade show mt-3 py-3 text-center" role="alert">
@@ -27,11 +29,15 @@
             </div>
         @endif
         @auth
-            <div class="d-flex justify-content-center mb-5">
-                <div class="card col-md-6 col-sm-6 p-3">
-                    <input type="text" class="form-control" readonly style="border-radius: 20px; cursor: pointer;"
+            <div class="container">
+                <div class="d-flex" type="button">
+                    <div class="p-1">
+                        <img src="{{ Storage::url(auth()->user()->profile_image) }}" alt="avatar" class="rounded-circle me-2"
+                            style="width: 38px; height: 38px; object-fit: cover" />
+                    </div>
+                    <input type="text" class="form-control rounded-pill border-0 bg-gray pointer"
                         placeholder="What's on your mind, {{ auth()->user()->name }}?" data-bs-toggle="modal"
-                        data-bs-target="#addPost" id="input-area">
+                        data-bs-target="#addPost" readonly id="input-area" />
                 </div>
             </div>
         @endauth
@@ -42,7 +48,7 @@
                 @include('pages.posts.comment')
             @endauth
             <div class="d-flex justify-content-center mt-3">
-                <div class="card col-md-6 col-sm-6">
+                <div class="card col-md-6 col-sm-6 border-0">
                     <div class="body px-2 py-3">
                         <div class="dropdown">
                             <a class="btn float-right" href="#" id="menu-button" data-bs-toggle="dropdown"
@@ -55,7 +61,8 @@
                                             class="far fa-pen-to-square"></i>
                                         Edit</a>
                                     <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                        data-bs-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i> Delete</a>
+                                        data-bs-target="#deletePost{{ $post->id }}"><i class="far fa-trash"></i>
+                                        Delete</a>
                                 @else
                                     <a class="dropdown-item" href="#"><i class="far fa-bookmark"></i> Save</a>
                                     <a class="dropdown-item" href="#"><i class="far fa-flag"></i> Report</a>

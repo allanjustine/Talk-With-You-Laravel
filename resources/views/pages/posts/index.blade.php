@@ -1215,7 +1215,7 @@
                     </div>
                 @endauth
                 <!-- ================= Timeline ================= -->
-                <div class="col-12 col-lg-6 pb-5">
+                <div class="col-12 col-lg-6 pb-5 p-0">
                     <div class="d-flex flex-column justify-content-center w-100 mx-auto" style="max-width: 680px">
                         <!-- stories -->
                         @auth
