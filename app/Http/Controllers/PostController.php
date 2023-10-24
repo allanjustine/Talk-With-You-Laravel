@@ -34,7 +34,9 @@ class PostController extends Controller
             ->orWhereHas('user', function ($query) use ($search) {
                 $query->where('name', 'like', "%$search%");
             })
-            ->with('comments')->get();
+            ->with('comments')
+            ->orderBy('created_at', 'desc')
+            ->get();
 
 
         return view('pages.posts.searched', compact('posts', 'search', 'user', 'post', 'userCount', 'categories'));

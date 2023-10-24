@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row align-items-center">
             <!-- search -->
-            <div class="col d-flex align-items-center">
+            <div class="col d-flex align-items-center" id="inNav">
                 <!-- logo -->
                 <img src="https://www.pngmart.com/files/4/Crazy-PNG-Transparent-Picture.png" alt="Branding picture"
                     style="width: 3rem">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <!-- menus -->
-                <div class="col d-flex align-items-center justify-content-end">
+                <div class="col d-flex align-items-center justify-content-end" id="idNav2">
                     <!-- main menu -->
                     <div class="rounded-circle p-1 bg-gray d-flex align-items-center justify-content-center mx-2"
                         style="width: 38px; height: 38px" type="button" id="mainMenu" data-bs-toggle="dropdown"
@@ -689,12 +689,15 @@
                         style="width: 38px; height: 38px" type="button" id="notMenu" data-bs-toggle="dropdown"
                         aria-expanded="false" data-bs-auto-close="outside">
                         <i class="fas fa-bell position-relative">
-                            @if ($unreadCount = auth()->user()->unreadNotifications()->count() != 0)
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                            style="font-size: 0.5rem">
-                            {{ $unreadCount = auth()->user()->unreadNotifications()->count() }}
-                            <span class="visually-hidden"></span>
-                        </span>
+                            @if (
+                                $unreadCount =
+                                    auth()->user()->unreadNotifications()->count() != 0)
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    style="font-size: 0.5rem">
+                                    {{ $unreadCount = auth()->user()->unreadNotifications()->count() }}
+                                    <span class="visually-hidden"></span>
+                                </span>
                             @endif
                         </i>
                     </div>
@@ -871,14 +874,14 @@
                         </li>
                     </ul>
                     <!-- secondary menu -->
-                    <div class="rounded-circle p-1 bg-gray d-flex align-items-center justify-content-center mx-2"
+                    <div class="rounded-circle bg-gray d-flex align-items-center justify-content-center mx-2"
                         style="width: 38px; height: 38px" type="button" id="secondMenu" data-bs-toggle="dropdown"
                         aria-expanded="false" data-bs-auto-close="outside">
                         <img src="{{ Storage::url(auth()->user()->profile_image) }}" class="rounded-circle"
                             alt="avatar" style="width: 38px; height: 38px;" />
                     </div>
                     <!-- secondary menu dd -->
-                    <ul class="dropdown-menu border-0 shadow p-3" aria-labelledby="secondMenu" style="width: 23em">
+                    <ul class="dropdown-menu border-0 shadow p-3" aria-labelledby="secondMenu" style="width: 23em;">
                         <!-- avatar -->
                         <a href="/profile" class="text-decoration-none">
                             <li class="dropdown-item p-1 rounded d-flex" type="button">
@@ -1434,4 +1437,13 @@
         font-size: 13px;
         color: #1361c7;
     } */
+
+    @media screen and (max-width: 368px) {
+        #inNav {
+            width: 30%;
+        }
+        #idNav2 {
+            width: 70%;
+        }
+    }
 </style>

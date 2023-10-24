@@ -1555,7 +1555,19 @@
                                                 <span class="text-muted"
                                                     style="margin-left: 60px;">{{ $post->created_at->diffForHumans() }}</span>
                                             </div>
-                                            <h5 class="mt-4">{{ $post->content }}</h5>
+                                            <div class="content">
+                                                <h6 class="mt-4" id="postContent{{ $post->id }}">
+                                                    @if (strlen($post->content) > 2000)
+                                                        <span id="subs{{ $post->id }}">{{ substr($post->content, 0, 200) }}</span>
+                                                        <span id="dots{{ $post->id }}">...</span>
+                                                        <span id="more{{ $post->id }}" style="display:none;">
+                                                            {{ substr($post->content, 0, 200) }}{{ substr($post->content, 200) }}</span>
+                                                        <a id="see-more-button{{ $post->id }}" href="javascript:void(0);" onclick="toggleSeeMore({{ $post->id }})">See more</a>
+                                                    @else
+                                                        {{ $post->content }}
+                                                    @endif
+                                                </h6>
+                                            </div>
                                             @if (is_array($post->post_image) && count($post->post_image) > 0)
                                                 @if (count($post->post_image) == 1)
                                                     <a href="#" data-bs-toggle="modal"
@@ -1683,7 +1695,8 @@
                                                 </div>
                                                 <div>
 
-                                                    <button class="btn"><i class="far fa-share"></i> Share</button>
+                                                    <button class="btn"><i class="far fa-share"></i>
+                                                        Share</button>
                                                 </div>
                                             </div>
                                         </footer>
@@ -2918,3 +2931,26 @@
         display: block;
     }
 </style>
+
+<script>
+    function toggleSeeMore(postId) {
+        var dots = document.getElementById("dots" + postId);
+        var subs = document.getElementById("subs" + postId);
+        var moreText = document.getElementById("more" + postId);
+        var btnText = document.getElementById("see-more-button" + postId);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            subs.style.display = "inline";
+            moreText.style.display = "none";
+            btnText.innerHTML = "See more";
+        } else {
+            dots.style.display = "none";
+            subs.style.display = "none";
+            moreText.style.display = "inline";
+            moreText.style.display = "inline";
+            // btnText.innerHTML = "See less";
+            btnText.innerHTML = "";
+        }
+    }
+</script>
