@@ -1479,7 +1479,6 @@
                                 @include('pages.posts.comment')
                             @endguest
                             <div class="bg-white rounded p-3 shadow mt-3">
-
                                 <div>
                                     <div class="card border-0">
                                         <div class="body px-2 py-3">

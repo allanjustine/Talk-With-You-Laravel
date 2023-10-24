@@ -15,6 +15,10 @@ class CommentController extends Controller
     {
         $post = Post::find($request->post_id);
 
+        if ($post === null) {
+            return back()->with('error', 'The post associated with this comment no longer exists.');
+        }
+
         $user = User::find($post->user_id);
 
         $request->validate([

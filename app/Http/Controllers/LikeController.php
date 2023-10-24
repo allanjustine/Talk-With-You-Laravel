@@ -16,6 +16,10 @@ class LikeController extends Controller
 
         $post = Post::find($request->post_id);
 
+        if ($post === null) {
+            return back()->with('error', 'The post associated with this like no longer exists.');
+        }
+
         $user = User::find($post->user_id);
 
         Like::create([
@@ -30,6 +34,7 @@ class LikeController extends Controller
 
     public function unlike(Like $like)
     {
+
         if (auth()->id() == $like->user_id) {
             $like->delete();
 
