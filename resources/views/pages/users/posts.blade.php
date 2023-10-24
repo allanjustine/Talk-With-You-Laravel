@@ -327,8 +327,8 @@
             </div>
         @endforeach
         @if ($my_posts->count() === 0)
-            <p class="text-muted text-center">
-                No posts yet
+            <p class="text-muted text-center mt-5">
+                You haven't post yet, add one to expose to everyone!
             </p>
         @endif
     </div>

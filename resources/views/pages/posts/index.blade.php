@@ -1752,8 +1752,8 @@
                             </div>
                         @endforeach
                         @if ($posts->count() === 0)
-                            <p class="text-muted text-center">
-                                No posts yet
+                            <p class="text-muted text-center mt-5">
+                                No posts yet, add one to expose to everyone!
                             </p>
                         @endif
                     </div>
