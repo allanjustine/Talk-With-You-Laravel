@@ -104,7 +104,7 @@ class PostController extends Controller
     {
         $request->validate([
             'content'           =>          ['required'],
-            'post_image'        =>          ['max:2048']
+            'post_image'        =>          ['max:10000']
         ]);
 
         $users = auth()->check();

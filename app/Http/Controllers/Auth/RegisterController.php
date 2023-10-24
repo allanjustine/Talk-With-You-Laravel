@@ -30,7 +30,7 @@ class RegisterController extends Controller
             'email'                     =>          ['required', 'max:255', 'email', 'unique:users,email'],
             'password'                  =>          ['required', 'confirmed', 'max:20', 'min:6'],
             'password_confirmation'     =>          ['required', 'max:20', 'min:6'],
-            'profile_image'             =>          ['max:2048']
+            'profile_image'             =>          ['max:10000']
         ]);
 
         if ($request->hasFile('profile_image')) {
