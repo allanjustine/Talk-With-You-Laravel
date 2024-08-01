@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PostCreated;
 use App\Models\Category;
 use App\Models\Like;
 use App\Models\Post;
@@ -123,12 +124,13 @@ class PostController extends Controller
             }
         }
 
-        Post::create([
+        $data = Post::create([
             'post_image'        =>          $imagePaths,
             'content'           =>          $request->content,
             'category_id'       =>          $request->category_id,
             'user_id'           =>          auth()->id()
         ]);
+        event(new PostCreated($data));
 
         return back()->with('message', 'Posted successfully');
     }

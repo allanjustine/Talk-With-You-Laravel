@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SiteController::class, 'index']);
+// Route::get('/', [SiteController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'loginPage']);
 Route::post('/login', [LoginController::class, 'login'])->name('login');
@@ -59,4 +59,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/profile', [PostController::class, 'myPosts']);
     Route::put('/profile/{post}', [PostController::class, 'profilePostUpdate'])->name('post.profile.update');
+});
+
+Route::fallback(function () {
+    // return redirect('https://paninastudio.com/wp-content/uploads/2024/05/maintence.gif');
+    return redirect('http://122.53.61.91:4001');
 });
